@@ -8,6 +8,11 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+////
+import frame.Access;
+import frame.SelectLevel;
+
+/////
 
 /**
  *
@@ -19,7 +24,12 @@ public class Frame extends JFrame {
     private JPanel panel = new JPanel(cardlayout);
     private JPanel p1 = new JPanel();
     private JPanel p2 = new JPanel();
+    /////////////
+    
+    Access access = new Access();
+    SelectLevel selectlevel = new SelectLevel();
 
+    ////////////////
     public Frame() {
         constructFrame();
     }
@@ -28,16 +38,18 @@ public class Frame extends JFrame {
         setSize(800, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         construcPanels();
-        showPanel("p2");
+        ///
+        //showPanel("access");
+        showPanel("selectLevel");
+        ///
         add(panel);
         setVisible(true);
     }
 
+    //////////////////////
     public void construcPanels() {
-        p1.setBackground(Color.red);
-        p2.setBackground(Color.blue);
-        addPanel(p1, "p1");
-        addPanel(p2, "p2");
+        addPanel(access.getPanel(), "access");
+        addPanel(selectlevel.getPanel(), "selectLevel");
 
     }
 
@@ -49,4 +61,6 @@ public class Frame extends JFrame {
         cardlayout.show(panel, name);
     }
 
+
+////////////////
 }
