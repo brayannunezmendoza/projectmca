@@ -8,6 +8,7 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import controllers.CntllrsPanel;
 ////
 import frame.Access;
 import frame.SelectLevel;
@@ -20,14 +21,16 @@ import frame.SelectLevel;
  */
 public class Frame extends JFrame {
 
-    private CardLayout cardlayout = new CardLayout();
-    private JPanel panel = new JPanel(cardlayout);
-    private JPanel p1 = new JPanel();
-    private JPanel p2 = new JPanel();
+    //private CardLayout cardlayout = new CardLayout();
+    //private JPanel panel = new JPanel(cardlayout);
+    CntllrsPanel panelControll = new CntllrsPanel();
+
+    //private JPanel p1 = new JPanel();
+    //private JPanel p2 = new JPanel();
     /////////////
     
-    Access access = new Access();
-    SelectLevel selectlevel = new SelectLevel();
+    //private Access access = new Access();
+    //private SelectLevel selectlevel = new SelectLevel();
 
     ////////////////
     public Frame() {
@@ -39,28 +42,25 @@ public class Frame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         construcPanels();
         ///
-        //showPanel("access");
-        showPanel("selectLevel");
+        panelControll.showPanel("selectLevel");
+        //showPanel("selectLevel");
         ///
-        add(panel);
         setVisible(true);
     }
 
     //////////////////////
     public void construcPanels() {
-        addPanel(access.getPanel(), "access");
-        addPanel(selectlevel.getPanel(), "selectLevel");
-
+        //addPanel(access.getPanel(), "access");
+        //addPanel(selectlevel.getPanel(), "selectLevel");
+        add(panelControll.getPanel());
     }
 
-    public void addPanel(JPanel subPanel, String name) {
+    /*public void addPanel(JPanel subPanel, String name) {
         panel.add(name, subPanel);
     }
-
     public void showPanel(String name) {
         cardlayout.show(panel, name);
-    }
-
+    }*/
 
 ////////////////
 }
