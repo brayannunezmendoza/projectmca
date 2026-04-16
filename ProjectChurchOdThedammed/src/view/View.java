@@ -6,15 +6,16 @@ package view;
 
 import java.awt.Rectangle;
 import javax.swing.JFrame;
+import panels.StartGame;
 
 /**
  *
- * @author 12525153326
+ * @author brayan - - - 
  */
 public class View extends JFrame {
 
     //dimensões do frame
-    private int x, y, w = 1200, h = 720;
+    private int x, y, w = 1210, h = 750;
     private Rectangle bounds = new Rectangle(w, h);
     private boolean visible = true;
 
@@ -25,7 +26,13 @@ public class View extends JFrame {
     public void initFrame() {
         setBounds(bounds);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+        
+        ///teste, será adicionado direto no cardlayout mais tarde
+        ////PanelCard panelCard = new PanelCard();/*{add(StartGame,"panelGame"))
+        ///cardlatout.show("panelGame") --metodo}*/
+        panels.StartGame p = new StartGame() ;
+        add(p);
+        ////
         setVisible(visible);
 
     }
