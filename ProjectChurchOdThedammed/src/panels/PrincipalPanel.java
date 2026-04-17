@@ -1,14 +1,9 @@
 package panels;
 
 import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import javax.swing.JPanel;
-import models.Player;
 
+import javax.swing.JPanel;
+import panels.Acess;
 /**
  *
  * @author 12525153326
@@ -16,18 +11,18 @@ import models.Player;
 public class PrincipalPanel extends JPanel  {
 
     private CardLayout cl = new CardLayout();
-    StartGame sg = new StartGame();
-
+    //StartGame sg = new StartGame();
+    Acess acess = new Acess();
     public PrincipalPanel() {
-       
+        
         setLayout(cl);
         loadPanels();
-        showPanel("sg");
+        showPanel("ac");
 
     }
 
     public void addPanel(JPanel panel, String name) {
-        add(name, sg);
+        add(name, panel);
     }
 
     public void showPanel(String name) {
@@ -35,7 +30,9 @@ public class PrincipalPanel extends JPanel  {
     }
 
     public void loadPanels() {
-        addPanel(sg, "sg");
+        addPanel(acess,"ac");
+        //addPanel(sg, "sg");
+        
 
     }
   
