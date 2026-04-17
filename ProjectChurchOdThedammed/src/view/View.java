@@ -6,6 +6,7 @@ package view;
 
 import java.awt.Rectangle;
 import javax.swing.JFrame;
+import panels.PrincipalPanel;
 import panels.StartGame;
 
 /**
@@ -30,7 +31,9 @@ public class View extends JFrame {
         ///teste, será adicionado direto no cardlayout mais tarde
         ////PanelCard panelCard = new PanelCard();/*{add(StartGame,"panelGame"))
         ///cardlatout.show("panelGame") --metodo}*/
-        panels.StartGame p = new StartGame() ;
+       // panels.StartGame p = new StartGame() ;
+        //add(p);
+        panels.PrincipalPanel p = new PrincipalPanel();
         add(p);
         ////
         setVisible(visible);
