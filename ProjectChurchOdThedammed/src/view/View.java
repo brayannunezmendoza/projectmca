@@ -11,7 +11,7 @@ import panels.StartGame;
 
 /**
  *
- * @author brayan - - - 
+ * @author brayan - - -
  */
 public class View extends JFrame {
 
@@ -27,11 +27,11 @@ public class View extends JFrame {
     public void initFrame() {
         setBounds(bounds);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
+
         ///teste, será adicionado direto no cardlayout mais tarde
         ////PanelCard panelCard = new PanelCard();/*{add(StartGame,"panelGame"))
         ///cardlatout.show("panelGame") --metodo}*/
-       // panels.StartGame p = new StartGame() ;
+        //panels.StartGame p = new StartGame() ;
         //add(p);
         panels.PrincipalPanel p = new PrincipalPanel();
         add(p);

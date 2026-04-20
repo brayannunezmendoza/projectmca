@@ -24,6 +24,7 @@ public class StartGame extends JPanel implements KeyListener {
     private int tick = 14;
     BufferedImage imgBackground;
 
+    //load image fundo temporareo
     public void loaderImages() {
         try {
             imgBackground = ImageIO.read(new File("src/res/scre1.png"));
@@ -39,6 +40,7 @@ public class StartGame extends JPanel implements KeyListener {
         player.desenhar(g);
     }
 
+    //inicialização
     public void initPanel() {
         setFocusable(isVisible());
         requestFocusInWindow();
@@ -71,8 +73,8 @@ public class StartGame extends JPanel implements KeyListener {
     private boolean movRight;
     private boolean run;
 
+    //boleans de teclas e ações
     public void actionPerformed() {
-
         if (movUp) {
             dpy = -speed;
         }
@@ -98,6 +100,7 @@ public class StartGame extends JPanel implements KeyListener {
     public void keyTyped(KeyEvent e) {
     }
 
+    //teclas pressionadas
     @Override
     public void keyPressed(KeyEvent e) {
         var code = e.getKeyCode();
@@ -118,7 +121,8 @@ public class StartGame extends JPanel implements KeyListener {
         }
 
     }
-
+    
+    //teclas soltadas
     @Override
     public void keyReleased(KeyEvent e) {
         movRight = false;
